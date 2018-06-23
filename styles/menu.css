@@ -1,0 +1,21 @@
+/* #main-menu::before{
+    content: url('../resources/images/navbar-background-before.png');
+    top:-43px;
+    position: absolute;
+    left:0;
+} */
+
+#main-menu {
+    background-image: url('../resources/images/header.png');
+    background-repeat: no-repeat;
+    padding-bottom:36px;
+    overflow:hidden;
+    position: relative;
+    margin-bottom:-94px;
+}
+
+#main-menu.sticky-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}

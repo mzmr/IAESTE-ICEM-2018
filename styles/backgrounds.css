@@ -1,0 +1,28 @@
+.background-image {
+    background-size:cover;
+    background-position: center;
+}
+
+#join-us {
+    background-image:url('../resources/images/backgrounds/bkg1.png');
+}
+
+#about-icem {
+    background-image:url('../resources/images/backgrounds/bkg2.png');
+}
+
+#schedule {
+    background-image:url('../resources/images/backgrounds/bkg3.png');
+}
+
+#guidebook {
+    background-image:url('../resources/images/backgrounds/bkg4.png');
+}
+
+#payment {
+    background-image:url('../resources/images/backgrounds/bkg5.png');
+}
+
+#contact {
+    background-image:url('../resources/images/backgrounds/bkg6.png');
+}
