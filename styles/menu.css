@@ -1,21 +1,39 @@
-/* #main-menu::before{
-    content: url('../resources/images/navbar-background-before.png');
-    top:-43px;
-    position: absolute;
-    left:0;
-} */
-
 #main-menu {
-    background-image: url('../resources/images/header.png');
+    background-image: url('../resources/images/header_trans_3_white.png');
     background-repeat: no-repeat;
-    padding-bottom:36px;
     overflow:hidden;
     position: relative;
-    margin-bottom:-94px;
+    height:150px;
+    margin-top:-90px;
+    z-index:100;
+}
+
+#collapsible-navbar {
+    justify-content:flex-end;
 }
 
 #main-menu.sticky-menu {
     position: fixed;
     top: 0;
     width: 100%;
+    margin-top:-45px;
+}
+
+#main-menu .navbar-nav .nav-item .nav-link {
+    color:white;
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px #000, 0px 0px 15px #000;
+}
+
+#main-menu .navbar-nav .nav-item .nav-link::-moz-selection {
+    background:transparent;
+}
+
+#main-menu .navbar-nav .nav-item .nav-link::selection {
+    background:transparent;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }

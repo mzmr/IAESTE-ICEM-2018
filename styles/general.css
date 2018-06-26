@@ -19,6 +19,16 @@ html, body {
     box-sizing: border-box;
 }
 
+*::-moz-selection {
+    background: #9b7fb5;
+    color:white;
+}
+
+*::selection {
+    background: #9b7fb5;
+    color:white;
+}
+
 .container.container-section {
     padding-top:150px;
     padding-bottom:60px;
@@ -29,4 +39,17 @@ html, body {
     margin-right:0;
     margin-left:auto;
     text-align:justify;
+}
+
+.container-section .section-header {
+    text-align: right;
+    font-size: 80px;
+    color: transparent;
+    text-shadow: 2px 2px 0px #ca4a4588, 1px 1px 0px #f0c46f, 0px 0px 0px #6f9e5199, -1px -1px 0px #7cd3e8, -2px -2px 0px #9a7eb5;
+    letter-spacing: -2px;
+    box-shadow: 1px 0px 0px #9a7eb5, 2px 0px 0px #7cd3e8, 3px 0px 0px #6f9e51, 4px 0px 0px #f0c46f, 5px 0px 0px #ca4a4599;
+    display: block;
+    padding-right: 50px;
+    margin: -140px auto 60px 0px;
+    position:relative;
 }

@@ -36,7 +36,7 @@
 
 		<!-- MAIN PAGE -->
 		
-		<div class="main-page-image">
+		<div id="main-page-image">
 		
 		</div>
 
@@ -44,48 +44,46 @@
 
 		<!-- NAVBAR -->
 
-		<nav class="navbar navbar-expand-sm navbar-light" id="main-menu">
-			<!-- Brand/logo -->
-			<!-- <a class="navbar-brand" href="#">
-				<img src="resources/images/icem-logo-full-size.png" alt="logo" style="width:40px;">
-			</a> -->
+		<nav id="main-menu" class="navbar navbar-expand-sm navbar-light">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsible-navbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 			
-			<!-- Links -->
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" href="#join-us">Join us!</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#about-icem">About</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#schedule">Schedule</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#guidebook">Guidebook</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#payment">Payment</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#contact">Contact</a>
-				</li>
-			</ul>
+			<div class="collapse navbar-collapse" id="collapsible-navbar">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#join-us">Join us!</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#about-icem">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#schedule">Schedule</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#guidebook">Guidebook</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#payment">Payment</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contact">Contact</a>
+					</li>
+				</ul>
+			</div>
 		</nav>
 
 
 
 		<!-- WHY YOU SHOULD JOIN US? -->
 
-		<div id="join-us" class="background-image">
+		<div id="join-us-container" class="background-image">
 			<div class="container container-section">
-				<div class="inner-container-right">
-					<h1>WHY YOU SHOULD JOIN US?</h1>
-					<p>ICEM is an annual event for both IAESTE trainees and members from all over the world. This annual event is a must in your calendar.</p>
-					<p>Come to Cracow to feel the magic when you cross the streets around the Old Town and cruise the Vistula River. The city is the only one of its kind, offering you rich historic and cultural heritage, astounding sites and wonderful atmosphere.</p>
-					<p>Our Local Committee gives you the chance to spend an unforgettable weekend by preparing various attractions, beginning with treasure hunting city game, ending with all night long parties.</p>
-					<p>Meet awesome people and make unforgettable memories!</p>
-				</div>
+				<h1 class="section-header"><a id="join-us" name="anchor" style="position:absolute; top:-100px;"></a>Why You should join us?</h1>
+				<p>ICEM is an annual event for both IAESTE trainees and members from all over the world. This annual event is a must in your calendar.</p>
+				<p>Come to Cracow to feel the magic when you cross the streets around the Old Town and cruise the Vistula River. The city is the only one of its kind, offering you rich historic and cultural heritage, astounding sites and wonderful atmosphere.</p>
+				<p>Our Local Committee gives you the chance to spend an unforgettable weekend by preparing various attractions, beginning with treasure hunting city game, ending with all night long parties.</p>
+				<p>Meet awesome people and make unforgettable memories!</p>
 			</div>
 		</div>
 
@@ -93,9 +91,9 @@
 
 		<!-- ABOUT ICEM 2018 -->
 
-		<div id="about-icem" class="background-image">
+		<div id="about-icem-container" class="background-image">
 			<div class="container container-section">
-				<h1>ABOUT ICEM 2018</h1>
+				<h1 class="section-header"><a id="about-icem" name="anchor" style="position:absolute; top:-100px;"></a>About ICEM 2018</h1>
 				<p>
 					<h3><i class="fas fa-map-pin icon-about-icem"></i>Where?</h3>
 					<span class="info-about-icem">Cracow, AGH UST</span>
@@ -123,9 +121,9 @@
 
 		<!-- SCHEDULE -->
 
-		<div id="schedule" class="background-image">
+		<div id="schedule-container" class="background-image">
 			<div class="container container-section">
-				<h1>SCHEDULE</h1>
+				<h1 class="section-header"><a id="schedule" name="anchor" style="position:absolute; top:-100px;"></a>Schedule</h1>
 				<div id="day-buttons">
 					<button class="button-friday">Friday</button>
 					<button class="button-saturday">Saturday</button>
@@ -192,13 +190,11 @@
 
 		<!-- GUIDEBOOK -->
 
-		<div id="guidebook" class="background-image">
+		<div id="guidebook-container" class="background-image">
 			<div class="container container-section">
-				<div class="inner-container-right">
-					<h1>GUIDEBOOK</h1>
-					<p>We want You not to get lost in Kraków so we've prepared a short guidebook for You.</p>
-					<p>You can download it <a href="#guidebook">here</a></p>
-				</div>
+				<h1 class="section-header"><a id="guidebook" name="anchor" style="position:absolute; top:-100px;"></a>Guidebook</h1>
+				<p>We want You not to get lost in Kraków so we've prepared a short guidebook for You.</p>
+				<p>You can download it <a href="#guidebook">here</a></p>
 			</div>
 		</div>
 
@@ -206,49 +202,47 @@
 
 		<!-- PAYMENT -->
 
-		<div id="payment" class="background-image">
+		<div id="payment-container" class="background-image">
 			<div class="container container-section">
-				<div class="">
-					<h1>PAYMENT</h1>
-					<p>You have 3 days to pay after registering! Otherwise your registration will be invalid :(</p>
-					
-					<table>
-						<thead>
-							<tr>
-								<th></th>
-								<th colspan="2">Payment</th>
-							</tr>
-							<tr>
-								<th>Program option</th>
-								<th>PLN</th>
-								<th>EUR</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th>1. Normal</th>
-								<td>200 PLN</td>
-								<td>50 EUR</td>
-							</tr>
-							<tr>
-								<th>2. Without accomodation</th>
-								<td>150 PLN</td>
-								<td>37 EUR</td>
-							</tr>
-							<tr>
-								<th>3. Optional Auschwitz - Birkenau tour (on Friday) Additional payment</th>
-								<td>120 PLN</td>
-								<td>30 EUR</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>IBAN:<br>xD xD xD</td>
-								<td>IBAN:<br>xD xD xD</td>
-							</tr>
-						</tbody>
-					</table>
-	
-				</div>
+				<h1 class="section-header"><a id="payment" name="anchor" style="position:absolute; top:-100px;"></a>Payment</h1>
+				<p>You have 3 days to pay after registering! Otherwise your registration will be invalid :(</p>
+				
+				<table>
+					<thead>
+						<tr>
+							<th></th>
+							<th colspan="2">Payment</th>
+						</tr>
+						<tr>
+							<th>Program option</th>
+							<th>PLN</th>
+							<th>EUR</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>1. Normal</th>
+							<td>200 PLN</td>
+							<td>50 EUR</td>
+						</tr>
+						<tr>
+							<th>2. Without accomodation</th>
+							<td>150 PLN</td>
+							<td>37 EUR</td>
+						</tr>
+						<tr>
+							<th>3. Optional Auschwitz - Birkenau tour (on Friday) Additional payment</th>
+							<td>120 PLN</td>
+							<td>30 EUR</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>IBAN:<br>xD xD xD</td>
+							<td>IBAN:<br>xD xD xD</td>
+						</tr>
+					</tbody>
+				</table>
+
 			</div>
 		</div>
 
@@ -256,15 +250,15 @@
 
 		<!-- CONTACT -->
 
-		<div id="contact" class="background-image">
-				<div class="container container-section">
-					<div>
-						<h1>CONTACT</h1>
-						<p>Any questions?</p>
-						<p>Just ask!</p>
-					</div>
+		<div id="contact-container" class="background-image">
+			<div class="container container-section">
+				<div>
+					<h1 class="section-header"><a id="contact" name="anchor" style="position:absolute; top:-100px;"></a>Contact</h1>
+					<p>Any questions?</p>
+					<p>Just ask!</p>
 				</div>
 			</div>
+		</div>
 		
 		<script src="scripts/menu.js"></script>
 	</body>

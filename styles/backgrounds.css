@@ -1,28 +1,30 @@
 .background-image {
     background-size:cover;
-    background-position: center;
+    background-position: bottom;
+    min-height:50vw;
 }
 
-#join-us {
-    background-image:url('../resources/images/backgrounds/bkg1.png');
+#join-us-container {
+    background-image:linear-gradient(#fffb, #fffb), url('../resources/images/backgrounds/bkg1.jpg');
+    margin-top:50px;
 }
 
-#about-icem {
-    background-image:url('../resources/images/backgrounds/bkg2.png');
+#about-icem-container {
+    background-image:linear-gradient(#fffb, #fffb), url('../resources/images/backgrounds/bkg2.jpg');
 }
 
-#schedule {
-    background-image:url('../resources/images/backgrounds/bkg3.png');
+#schedule-container {
+    background-image:linear-gradient(#fffb, #fffb), url('../resources/images/backgrounds/bkg3.jpg');
 }
 
-#guidebook {
-    background-image:url('../resources/images/backgrounds/bkg4.png');
+#guidebook-container {
+    background-image:linear-gradient(#fffb, #fffb), url('../resources/images/backgrounds/bkg4.jpg');
 }
 
-#payment {
-    background-image:url('../resources/images/backgrounds/bkg5.png');
+#payment-container {
+    background-image:linear-gradient(#fffb, #fffb), url('../resources/images/backgrounds/bkg5.jpg');
 }
 
-#contact {
-    background-image:url('../resources/images/backgrounds/bkg6.png');
+#contact-container {
+    background-image:linear-gradient(#fffb, #fffb), url('../resources/images/backgrounds/bkg6.jpg');
 }

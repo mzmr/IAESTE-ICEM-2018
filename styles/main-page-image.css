@@ -1,8 +1,20 @@
-.main-page-image {
-    background-image: url('../resources/images/navbar-background-before.png'),url('../resources/images/icem-main-page.png');
+#main-page-image {
+    /* background-image: url('../resources/images/navbar-background-before.png'),url('../resources/images/icem-main-page.png');
     background-size: 100%, cover;
     background-position-x: left, right;
     background-position-y: bottom, top;
     background-repeat: no-repeat, no-repeat;
+    height:100%; */
+
+    margin-top:45px;
+    background-image:url('../resources/images/main-image.png');
+    background-size:cover;
+    background-position-x:center;
+    background-position-y:top;
+    background-repeat:no-repeat;
     height:100%;
+}
+
+#main-page-image.sticky-menu {
+    margin-bottom:110px;
 }
