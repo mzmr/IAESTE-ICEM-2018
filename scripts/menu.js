@@ -14,4 +14,19 @@ function manageNavbarStickness() {
     navbar.classList.remove('sticky-menu');
     mainPageImage.classList.remove('sticky-menu');
   }
-} 
+}
+
+
+function openNav() {
+  document.getElementById('mobile-menu-left').style.width = '50%';
+  document.getElementById('mobile-menu-right').style.width = '50%';
+  document.getElementById('mobile-menu-left').classList.add('active');
+  document.getElementById('mobile-menu-right').classList.add('active');
+}
+
+function closeNav() {
+  document.getElementById('mobile-menu-left').classList.remove('active');
+  document.getElementById('mobile-menu-right').classList.remove('active');
+  document.getElementById('mobile-menu-left').style.width = '0';
+  document.getElementById('mobile-menu-right').style.width = '0';
+}

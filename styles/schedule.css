@@ -1,0 +1,107 @@
+
+#schedule-container #day-buttons {
+    padding-right:0;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+}
+
+#schedule-container .day-button {
+    height:130px;
+    width:130px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor: pointer;
+    color: white;
+    border-radius: 50%;
+}
+
+#schedule-container .day-button#button-friday {
+    background:#9a7eb5;
+}
+
+#schedule-container .day-button#button-saturday {
+    background:#6f9e51;
+}
+
+#schedule-container .day-button#button-sunday {
+    background:#f0c46f;
+}
+
+#schedule-container .day-button#button-friday,
+#schedule-container .day-button#button-saturday,
+#schedule-container .day-button#button-sunday {
+    opacity:.5;
+    text-shadow:initial;
+    -webkit-transition: .5s; /* Safari */
+    transition: .5s;
+}
+
+#schedule-container .day-button#button-friday:hover,
+#schedule-container .day-button#button-saturday:hover,
+#schedule-container .day-button#button-sunday:hover {
+    opacity:.8;
+}
+
+#schedule-container .day-button#button-friday.active,
+#schedule-container .day-button#button-saturday.active,
+#schedule-container .day-button#button-sunday.active {
+    opacity:1;
+    text-shadow:inherit;
+    -webkit-transition: .5s; /* Safari */
+    transition: .5s;
+    box-shadow: 0px 0px 20px white, 0px 0px 20px white;
+    height:150px;
+    width:150px;
+}
+
+
+#schedule-container #schedule-content-saturday,
+#schedule-container #schedule-content-sunday {
+    display: none;
+}
+
+#schedule-container .schedule-day {
+    padding-left:50px;
+    display:flex;
+}
+
+#schedule-container .table-day {
+    width:100%;
+}
+
+#schedule-container .table-day * {
+    font-size:25px;
+}
+
+#schedule-container .table-day tr td:first-of-type {
+    width:200px;
+    text-align:center;
+}
+
+#schedule-container .table-day td {
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#schedule-container #schedule-content-friday .table-day tr {
+    border-bottom: 2px solid #9a7eb588;
+}
+
+#schedule-container #schedule-content-saturday .table-day tr {
+    border-bottom: 2px solid #6f9e5188;
+}
+
+#schedule-container #schedule-content-sunday .table-day tr {
+    border-bottom: 2px solid #f0c46f88;
+}
+
+#schedule-container #schedule-content-friday .table-day tr:last-child,
+#schedule-container #schedule-content-saturday .table-day tr:last-child,
+#schedule-container #schedule-content-sunday .table-day tr:last-child {
+    border-bottom:none;
+}

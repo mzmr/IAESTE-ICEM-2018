@@ -15,7 +15,9 @@
 		<link rel="stylesheet" href="styles/backgrounds.css">
 		<link rel="stylesheet" href="styles/main-page-image.css">
 		<link rel="stylesheet" href="styles/menu.css">
+		<link rel="stylesheet" href="styles/mobile-menu.css">
 		<link rel="stylesheet" href="styles/about-icem.css">
+		<link rel="stylesheet" href="styles/schedule.css">
 
 		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
@@ -44,10 +46,12 @@
 
 		<!-- NAVBAR -->
 
-		<nav id="main-menu" class="navbar navbar-expand-sm navbar-light">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsible-navbar">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+		<nav id="main-menu" class="navbar navbar-expand-md navbar-light">
+			<div class="navbar-header">
+				<button class="navbar-toggler" onclick="openNav()">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
 			
 			<div class="collapse navbar-collapse" id="collapsible-navbar">
 				<ul class="navbar-nav">
@@ -75,11 +79,31 @@
 
 
 
+		<!-- MOBILE MENU -->
+
+		<div id="mobile-menu-left" class="sidenav">
+			<div class="mobile-items-left">
+				<a href="#"><div class="item-div">Join us!</div></a>
+				<a href="#"><div class="item-div">Schedule</div></a>
+				<a href="#"><div class="item-div">Payment</div></a>
+			</div>
+		</div>
+		<div id="mobile-menu-right" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div class="mobile-items-right">
+				<a href="#"><div class="item-div">About</div></a>
+				<a href="#"><div class="item-div">Guidebook</div></a>
+				<a href="#"><div class="item-div">Contact</div></a>
+			</div>
+		</div>
+
+
+
 		<!-- WHY YOU SHOULD JOIN US? -->
 
 		<div id="join-us-container" class="background-image">
 			<div class="container container-section">
-				<h1 class="section-header"><a id="join-us" name="anchor" style="position:absolute; top:-100px;"></a>Why You should join us?</h1>
+				<h1 class="section-header"><a id="join-us" class="section-anchor"></a>Why should you join us?</h1>
 				<p>ICEM is an annual event for both IAESTE trainees and members from all over the world. This annual event is a must in your calendar.</p>
 				<p>Come to Cracow to feel the magic when you cross the streets around the Old Town and cruise the Vistula River. The city is the only one of its kind, offering you rich historic and cultural heritage, astounding sites and wonderful atmosphere.</p>
 				<p>Our Local Committee gives you the chance to spend an unforgettable weekend by preparing various attractions, beginning with treasure hunting city game, ending with all night long parties.</p>
@@ -93,27 +117,32 @@
 
 		<div id="about-icem-container" class="background-image">
 			<div class="container container-section">
-				<h1 class="section-header"><a id="about-icem" name="anchor" style="position:absolute; top:-100px;"></a>About ICEM 2018</h1>
-				<p>
-					<h3><i class="fas fa-map-pin icon-about-icem"></i>Where?</h3>
-					<span class="info-about-icem">Cracow, AGH UST</span>
-				</p>
-				<p>
-					<h3><i class="fas fa-calendar-alt icon-about-icem"></i>When?</h3>
-					<span class="info-about-icem">28th - 30th of July</span>
-				</p>
-				<p>
-					<h3><i class="fas fa-hotel icon-about-icem"></i>Accommodation</h3>
-					<span class="info-about-icem">'Maraton' dormitory, AGH UST CAMPUS, Tokarskiego 10 Street, 30-065 Kraków</span>
-				</p>
-				<p>
-					<h3><i class="fas fa-dollar-sign icon-about-icem"></i>Payment</h3>
-					<span class="info-about-icem">
-						200 PLN / 50 Euros<br>
-						150 PLN / 37 Euros (Cracow Local Comittee members and trainees)<br>
-						120 PLN/40 Euros optional Auschwitz-Birkenau tour
-					</span>
-				</p>
+				<h1 class="section-header"><a id="about-icem" class="section-anchor"></a>About ICEM 2018</h1>
+
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="about-icem-subheader"><i class="fas fa-map-pin icon-about-icem"></i>Where?</div>
+							<div class="about-icem-description">'Akropol' dormitory, AGH UST CAMPUS<br>Tokarskiego 1 Street, 30-065 Kraków</div>
+							<iframe id="dormitory-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1280.4714707374!2d19.90289135834942!3d50.06863021648506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165bb965fef921%3A0xf7155f28ccdcf00e!2sAkropol.+Dom+Studencki+nr+3+-+AGH!5e0!3m2!1spl!2spl!4v1530025261721" frameborder="0"allowfullscreen></iframe>
+						</div>
+						<div class="col-md-6">
+							<div class="about-icem-subheader"><i class="fas fa-calendar-alt icon-about-icem"></i>When?</div>
+							<div class="about-icem-description">27th - 29th of July</div>
+							<h3 id="calendar-name">July</h3>
+							<table id="about-icem-calendar">
+								<tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr>
+								<tr><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
+								<tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+								<tr><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+								<tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td></tr>
+								<tr><td>23</td><td>24</td><td>25</td><td>26</td><td id="friday">27</td><td id="saturday">28</td><td id="sunday">29</td></tr>
+								<tr><td>30</td><td>31</td><td></td><td></td><td></td><td></td><td></td></tr>
+							</table>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
 
@@ -123,65 +152,74 @@
 
 		<div id="schedule-container" class="background-image">
 			<div class="container container-section">
-				<h1 class="section-header"><a id="schedule" name="anchor" style="position:absolute; top:-100px;"></a>Schedule</h1>
-				<div id="day-buttons">
-					<button class="button-friday">Friday</button>
-					<button class="button-saturday">Saturday</button>
-					<button class="button-sunday">Sunday</button>
-				</div>
-				<div id="schedule-content">
-					<table id="table-friday">
-						<tr>
-							<td>10AM</td>
-							<td><strong>Auschwitz-Birkenau tour</strong> (optional)<br>120PLN/30&euro;, payment a week before</td>
-						</tr>
-						<tr>
-							<td>13AM - 6PM</td>
-							<td>Check-In &amp; Pizza</td>
-						</tr>
-						<tr>
-							<td>7PM</td>
-							<td>Party Time</td>
-						</tr>
-					</table>
+				<h1 class="section-header"><a id="schedule" class="section-anchor"></a>Schedule</h1>
+				<div class="container">
+					<div id="schedule-inner-container" class="row">
+						<div id="day-buttons" class="col-md-3">
+							<div id="button-friday" class="day-button active" onclick="toggleDay(this)">Friday</div>
+							<div id="button-saturday" class="day-button" onclick="toggleDay(this)">Saturday</div>
+							<div id="button-sunday" class="day-button" onclick="toggleDay(this)">Sunday</div>
+						</div>
 
-					<table id="table-saturday">
-						<tr>
-							<td>8:30AM - 10:30AM</td>
-							<td>Breakfast</td>
-						</tr>
-						<tr>
-							<td>10AM</td>
-							<td>Treasure hunting - city rally</td>
-						</tr>
-						<tr>
-							<td>3PM</td>
-							<td>Cruise on the Vistula river</td>
-						</tr>
-						<tr>
-							<td>5:30PM</td>
-							<td>Dinner</td>
-						</tr>
-						<tr>
-							<td>8PM</td>
-							<td>But why's the rum gone?! - pirate games with Captain Jack</td>
-						</tr>
-						<tr>
-							<td>9PM</td>
-							<td>Blackbeard's disco tavern</td>
-						</tr>
-					</table>
+						<div id="schedule-content-friday" class="col-md-9 schedule-day">
+							<table class="table-day">
+								<tr>
+									<td>10:00</td>
+									<td><strong>Auschwitz-Birkenau tour</strong> (optional)<br>120PLN/30&euro;, payment a week before</td>
+								</tr>
+								<tr>
+									<td>13:00 - 18:00</td>
+									<td>Check-In &amp; Pizza</td>
+								</tr>
+								<tr>
+									<td>19:00</td>
+									<td>Party Time</td>
+								</tr>
+							</table>
+						</div>
 
-					<table id="table-sunday">
-						<tr>
-							<td>8AM - 10AM</td>
-							<td>Check-out &amp; breakfast</td>
-						</tr>
-						<tr>
-							<td>10AM</td>
-							<td>Sightseeing &amp; Main Square Undergrounds<br>(optional, 15PLN for entry fees)</td>
-						</tr>
-					</table>
+						<div id="schedule-content-saturday" class="col-md-9 schedule-day">
+							<table class="table-day">
+								<tr>
+									<td>8:30 - 10:30</td>
+									<td>Breakfast</td>
+								</tr>
+								<tr>
+									<td>10:00</td>
+									<td>Treasure hunting - city rally</td>
+								</tr>
+								<tr>
+									<td>15:00</td>
+									<td>Cruise on the Vistula river</td>
+								</tr>
+								<tr>
+									<td>17:30</td>
+									<td>Dinner</td>
+								</tr>
+								<tr>
+									<td>20:00</td>
+									<td>But why's the rum gone?! - pirate games with Captain Jack</td>
+								</tr>
+								<tr>
+									<td>21:00</td>
+									<td>Blackbeard's disco tavern</td>
+								</tr>
+							</table>
+						</div>
+
+						<div id="schedule-content-sunday" class="col-md-9 schedule-day">
+							<table class="table-day">
+								<tr>
+									<td>8:00 - 10:00</td>
+									<td>Check-out &amp; breakfast</td>
+								</tr>
+								<tr>
+									<td>10:00</td>
+									<td>Sightseeing &amp; Main Square Undergrounds<br>(optional, 15PLN for entry fees)</td>
+								</tr>
+							</table>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -192,7 +230,7 @@
 
 		<div id="guidebook-container" class="background-image">
 			<div class="container container-section">
-				<h1 class="section-header"><a id="guidebook" name="anchor" style="position:absolute; top:-100px;"></a>Guidebook</h1>
+				<h1 class="section-header"><a id="guidebook" class="section-anchor"></a>Guidebook</h1>
 				<p>We want You not to get lost in Kraków so we've prepared a short guidebook for You.</p>
 				<p>You can download it <a href="#guidebook">here</a></p>
 			</div>
@@ -204,7 +242,7 @@
 
 		<div id="payment-container" class="background-image">
 			<div class="container container-section">
-				<h1 class="section-header"><a id="payment" name="anchor" style="position:absolute; top:-100px;"></a>Payment</h1>
+				<h1 class="section-header"><a id="payment" class="section-anchor"></a>Payment</h1>
 				<p>You have 3 days to pay after registering! Otherwise your registration will be invalid :(</p>
 				
 				<table>
@@ -235,11 +273,6 @@
 							<td>120 PLN</td>
 							<td>30 EUR</td>
 						</tr>
-						<tr>
-							<td></td>
-							<td>IBAN:<br>xD xD xD</td>
-							<td>IBAN:<br>xD xD xD</td>
-						</tr>
 					</tbody>
 				</table>
 
@@ -253,7 +286,7 @@
 		<div id="contact-container" class="background-image">
 			<div class="container container-section">
 				<div>
-					<h1 class="section-header"><a id="contact" name="anchor" style="position:absolute; top:-100px;"></a>Contact</h1>
+					<h1 class="section-header"><a id="contact" class="section-anchor"></a>Contact</h1>
 					<p>Any questions?</p>
 					<p>Just ask!</p>
 				</div>
@@ -261,5 +294,6 @@
 		</div>
 		
 		<script src="scripts/menu.js"></script>
+		<script src="scripts/schedule.js"></script>
 	</body>
 </html>
