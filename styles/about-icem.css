@@ -88,3 +88,13 @@
     text-align: center;
     margin-top: 60px;
 }
+
+@media (max-width:767px) {
+    #about-icem-container .container-section > .container > .row > div.col-md-6:nth-child(2) {
+        margin-top:50px;
+    }
+
+    #about-icem-container #calendar-name {
+        margin-top:0;
+    }
+}

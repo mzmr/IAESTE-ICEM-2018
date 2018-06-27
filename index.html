@@ -48,7 +48,7 @@
 
 		<nav id="main-menu" class="navbar navbar-expand-md navbar-light">
 			<div class="navbar-header">
-				<button class="navbar-toggler" onclick="openNav()">
+				<button id="navbar-opener" class="navbar-toggler" onclick="openNav()">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 			</div>
@@ -83,17 +83,17 @@
 
 		<div id="mobile-menu-left" class="sidenav">
 			<div class="mobile-items-left">
-				<a href="#"><div class="item-div">Join us!</div></a>
-				<a href="#"><div class="item-div">Schedule</div></a>
-				<a href="#"><div class="item-div">Payment</div></a>
+				<a href="#join-us" onclick="closeNav()"><div>Join us!</div></a>
+				<a href="#schedule" onclick="closeNav()"><div>Schedule</div></a>
+				<a href="#payment" onclick="closeNav()"><div>Payment</div></a>
 			</div>
 		</div>
 		<div id="mobile-menu-right" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			<div class="mobile-items-right">
-				<a href="#"><div class="item-div">About</div></a>
-				<a href="#"><div class="item-div">Guidebook</div></a>
-				<a href="#"><div class="item-div">Contact</div></a>
+				<a href="#about-icem" onclick="closeNav()"><div>About</div></a>
+				<a href="#guidebook" onclick="closeNav()"><div>Guidebook</div></a>
+				<a href="#contact" onclick="closeNav()"><div>Contact</div></a>
 			</div>
 		</div>
 

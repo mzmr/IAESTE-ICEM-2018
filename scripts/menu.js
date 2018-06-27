@@ -17,16 +17,23 @@ function manageNavbarStickness() {
 }
 
 
+
+var navbarOpener = document.getElementById('navbar-opener');
+var mobileMenuLeft = document.getElementById('mobile-menu-left');
+var mobileMenuRight = document.getElementById('mobile-menu-right');
+
 function openNav() {
-  document.getElementById('mobile-menu-left').style.width = '50%';
-  document.getElementById('mobile-menu-right').style.width = '50%';
-  document.getElementById('mobile-menu-left').classList.add('active');
-  document.getElementById('mobile-menu-right').classList.add('active');
+  navbarOpener.style.display = 'none';
+  mobileMenuLeft.style.width = '50%';
+  mobileMenuRight.style.width = '50%';
+  mobileMenuLeft.classList.add('active');
+  mobileMenuRight.classList.add('active');
 }
 
 function closeNav() {
-  document.getElementById('mobile-menu-left').classList.remove('active');
-  document.getElementById('mobile-menu-right').classList.remove('active');
-  document.getElementById('mobile-menu-left').style.width = '0';
-  document.getElementById('mobile-menu-right').style.width = '0';
+  navbarOpener.style.display = 'inline-block';
+  mobileMenuLeft.classList.remove('active');
+  mobileMenuRight.classList.remove('active');
+  mobileMenuLeft.style.width = '0';
+  mobileMenuRight.style.width = '0';
 }

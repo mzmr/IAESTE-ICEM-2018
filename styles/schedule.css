@@ -105,3 +105,16 @@
 #schedule-container #schedule-content-sunday .table-day tr:last-child {
     border-bottom:none;
 }
+
+@media (max-width:767px) {
+    #schedule-container #day-buttons {
+        flex-direction:row;
+        height:150px;
+        margin-bottom:20px;
+    }
+
+    #schedule-container .schedule-day {
+        padding-left:0;
+        padding-right:0;
+    }
+}
