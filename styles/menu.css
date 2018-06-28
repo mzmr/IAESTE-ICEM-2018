@@ -6,6 +6,7 @@
     margin-top:-90px;
     z-index:100;
     justify-content:flex-end;
+    background-size:cover;
 }
 
 #collapsible-navbar {
@@ -42,13 +43,23 @@
 }
 
 @media (max-width:767px) {
+    #main-menu {
+        height:100px;
+        margin-top:-70px;
+    }
+    
     #main-menu .navbar-nav {
         background:white;
+    }
+
+    #main-menu.sticky-menu {
+        margin-top:-25px;
     }
 }
 
 .navbar-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    display:block;
 }
 
 .navbar-light .navbar-toggler {
@@ -60,6 +71,17 @@
 
 .navbar-light .navbar-toggler:focus {
     outline:none;
+}
+
+@media (max-width:767px) {
+    .navbar-light .navbar-toggler {
+        margin-top:5px;
+    }
+
+    .navbar-toggler .navbar-toggler-icon {
+        width:.8em;
+        height:.8em;
+    }
 }
 
 .navbar-light .navbar-header {

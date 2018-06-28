@@ -71,6 +71,16 @@ html, body {
         font-size: 70px;
         margin-bottom:120px;
     }
+
+    .container-section * {
+        font-size:27px;
+    }
+}
+
+@media (max-width:767px) {
+    .container-section * {
+        font-size:23px;
+    }
 }
 
 @media (min-width:576px) and (max-width:767px) {

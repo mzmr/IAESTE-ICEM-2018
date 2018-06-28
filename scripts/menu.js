@@ -7,7 +7,10 @@ var mainPageImage = document.getElementById('main-page-image');
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function manageNavbarStickness() {
-  if (navbar.getBoundingClientRect().top <= -45 && mainPageImage.getBoundingClientRect().bottom <= 45) {
+  var offset = window.innerWidth > 767 ? 45 : 20;
+  
+  if (navbar.getBoundingClientRect().top <= -offset
+      && mainPageImage.getBoundingClientRect().bottom <= 45) {
     navbar.classList.add('sticky-menu')
     mainPageImage.classList.add('sticky-menu');
   } else {

@@ -75,7 +75,7 @@
 }
 
 #schedule-container .table-day * {
-    font-size:25px;
+    /* font-size:25px; */
 }
 
 #schedule-container .table-day tr td:first-of-type {

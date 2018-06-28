@@ -1,11 +1,4 @@
 #main-page-image {
-    /* background-image: url('../resources/images/navbar-background-before.png'),url('../resources/images/icem-main-page.png');
-    background-size: 100%, cover;
-    background-position-x: left, right;
-    background-position-y: bottom, top;
-    background-repeat: no-repeat, no-repeat;
-    height:100%; */
-
     margin-top:45px;
     background-image:url('../resources/images/main-image.png');
     background-size:cover;
@@ -17,4 +10,10 @@
 
 #main-page-image.sticky-menu {
     margin-bottom:110px;
+}
+
+@media (max-width:767px) {
+    #main-page-image.sticky-menu {
+        margin-bottom:80px;
+    }
 }
