@@ -1,5 +1,6 @@
 #join-us-container #form-container {
     text-align:center;
+    margin-top:50px;
 }
 
 #join-us-container #registration-form {
@@ -9,6 +10,7 @@
     color: white;
     text-shadow: none;
     font-size: 40px;
+    margin-top:20px;
 }
 
 #join-us-container #registration-form:hover {
