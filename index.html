@@ -15,9 +15,12 @@
 		<link rel="stylesheet" href="styles/backgrounds.css">
 		<link rel="stylesheet" href="styles/main-page-image.css">
 		<link rel="stylesheet" href="styles/menu.css">
-		<link rel="stylesheet" href="styles/mobile-menu.css">
+		<link rel="stylesheet" href="styles/mobile-menu2.css">
 		<link rel="stylesheet" href="styles/about-icem.css">
 		<link rel="stylesheet" href="styles/schedule.css">
+		<link rel="stylesheet" href="styles/payment.css">
+		<link rel="stylesheet" href="styles/join-us.css">
+		<link rel="stylesheet" href="styles/contact.css">
 
 		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
@@ -64,9 +67,9 @@
 					<li class="nav-item">
 						<a class="nav-link" href="#schedule">Schedule</a>
 					</li>
-					<li class="nav-item">
+					<!-- <li class="nav-item">
 						<a class="nav-link" href="#guidebook">Guidebook</a>
-					</li>
+					</li> -->
 					<li class="nav-item">
 						<a class="nav-link" href="#payment">Payment</a>
 					</li>
@@ -81,22 +84,21 @@
 
 		<!-- MOBILE MENU -->
 
-		<div id="mobile-menu-left" class="sidenav">
-			<div class="mobile-items-left">
-				<a href="#join-us" onclick="closeNav()"><div>Join us!</div></a>
-				<a href="#schedule" onclick="closeNav()"><div>Schedule</div></a>
-				<a href="#payment" onclick="closeNav()"><div>Payment</div></a>
+		<div id="mobile-menu">
+			<a id="closebtn" onclick="closeNav()">&times;</a>
+			<div id="mobile-items">
+				<div id="mobile-items-left">
+					<a href="#join-us" onclick="closeNav()"><div>Join us!</div></a>
+					<a href="#schedule" onclick="closeNav()"><div>Schedule</div></a>
+					<a href="#payment" onclick="closeNav()"><div>Payment</div></a>
+				</div>
+				<div id="mobile-items-right">
+					<a href="#about-icem" onclick="closeNav()"><div>About</div></a>
+					<a href="#guidebook" onclick="closeNav()"><div>Guidebook</div></a>
+					<a href="#contact" onclick="closeNav()"><div>Contact</div></a>
+				</div>
 			</div>
 		</div>
-		<div id="mobile-menu-right" class="sidenav">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			<div class="mobile-items-right">
-				<a href="#about-icem" onclick="closeNav()"><div>About</div></a>
-				<a href="#guidebook" onclick="closeNav()"><div>Guidebook</div></a>
-				<a href="#contact" onclick="closeNav()"><div>Contact</div></a>
-			</div>
-		</div>
-
 
 
 		<!-- WHY YOU SHOULD JOIN US? -->
@@ -108,6 +110,8 @@
 				<p>Come to Cracow to feel the magic when you cross the streets around the Old Town and cruise the Vistula River. The city is the only one of its kind, offering you rich historic and cultural heritage, astounding sites and wonderful atmosphere.</p>
 				<p>Our Local Committee gives you the chance to spend an unforgettable weekend by preparing various attractions, beginning with treasure hunting city game, ending with all night long parties.</p>
 				<p>Meet awesome people and make unforgettable memories!</p>
+				<p>Don't wait, regiter now!</p>
+				<p id="form-container"><a id="registration-form" target="_blank" rel="noopener noreferrer" href="https://forms.office.com/Pages/ResponsePage.aspx?id=1jrEnms7ikiKF0CnGjQr4R0FQma9GD9GqYhFTfsJEYZUNVhNTVRWT1FUS1JTOTNaT0ZYMkNUQjQ2Ti4u">Registration form</a></p>
 			</div>
 		</div>
 
@@ -136,7 +140,10 @@
 								<tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
 								<tr><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
 								<tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td></tr>
-								<tr><td>23</td><td>24</td><td>25</td><td>26</td><td id="friday">27</td><td id="saturday">28</td><td id="sunday">29</td></tr>
+								<tr><td>23</td><td>24</td><td>25</td><td>26</td>
+									<td id="friday"><span class="small-width">27</span><span class="background"></span></td>
+									<td id="saturday"><span class="small-width">28</span><span class="background"></span></td>
+									<td id="sunday"><span class="small-width">29</span><span class="background"></span></td></tr>
 								<tr><td>30</td><td>31</td><td></td><td></td><td></td><td></td><td></td></tr>
 							</table>
 						</div>
@@ -164,16 +171,87 @@
 						<div id="schedule-content-friday" class="col-md-9 schedule-day">
 							<table class="table-day">
 								<tr>
-									<td>10:00</td>
-									<td><strong>Auschwitz-Birkenau tour</strong> (optional)<br>120PLN/30&euro;, payment a week before</td>
+									<td rowspan="2" class="hour">9 AM</td>
+									<td class="separator"></td>
+									<td colspan="2" class="empty"></td>
 								</tr>
 								<tr>
-									<td>13:00 - 18:00</td>
-									<td>Check-In &amp; Pizza</td>
+										<td class="separator"></td>
+									<td colspan="2" class="check-in top right left"></td>
 								</tr>
 								<tr>
-									<td>19:00</td>
-									<td>Party Time</td>
+									<td class="hour"></td>
+									<td class="separator"></td>
+									<td colspan="2" class="check-in right left">Check in</td>
+								</tr>
+								<tr>
+									<td rowspan="2" class="hour">10 AM</td>
+									<td class="separator"></td>
+									<td class="check-in left"></td>
+									<td class="check-in right"></td>
+								</tr>
+								<tr>
+									<td class="separator"></td>
+									<td class="auschwitz top left right"></td>
+									<td class="check-in right"></td>
+								</tr>
+								<tr>
+									<td class="hour"></td>
+									<td class="separator"></td>
+									<td class="auschwitz right left">Auschwitz-Birkenau tour</td>
+									<td class="check-in right"></td>
+								</tr>
+								<tr>
+									<td rowspan="2" class="hour">5 PM</td>
+									<td class="separator"></td>
+									<td class="auschwitz bottom right left"></td>
+									<td class="check-in right"></td>
+								</tr>
+								<tr>
+									<td class="separator"></td>
+									<td class="check-in left"></td>
+									<td rowspan="2" class="check-in right"></td>
+								</tr>
+								<tr>
+									<td rowspan="2" class="hour">6 PM</td>
+									<td class="separator"></td>
+									<td class="check-in left"></td>
+								</tr>
+								<tr>
+									<td class="separator"></td>
+									<td class="bbq top left right"></td>
+									<td class="check-in right"></td>
+								</tr>
+								<tr>
+									<td class="hour"></td>
+									<td class="separator"></td>
+									<td class="bbq right left">BBQ</td>
+									<td class="check-in right"></td>
+								</tr>
+								<tr>
+									<td rowspan="2" class="hour">10 PM</td>
+									<td class="separator"></td>
+									<td class="bbq right left"></td>
+									<td class="check-in right"></td>
+								</tr>
+								<tr>
+									<td class="separator"></td>
+									<td class="party top left"></td>
+									<td class="party top right"></td>
+								</tr>
+								<tr>
+									<td class="hour"></td>
+									<td class="separator"></td>
+									<td colspan="2" class="party right left">Party</td>
+								</tr>
+								<tr>
+									<td rowspan="2" class="hour">3 AM</td>
+									<td class="separator"></td>
+									<td colspan="2" class="party right bottom left"></td>
+								</tr>
+								<tr>
+									<td class="separator"></td>
+									<td colspan="2" class="empty"></td>
 								</tr>
 							</table>
 						</div>
@@ -181,41 +259,126 @@
 						<div id="schedule-content-saturday" class="col-md-9 schedule-day">
 							<table class="table-day">
 								<tr>
-									<td>8:30 - 10:30</td>
-									<td>Breakfast</td>
+									<td rowspan="2" class="hour">8:30 AM</td>
+									<td class="separator"></td>
+									<td class="empty"></td>
 								</tr>
 								<tr>
-									<td>10:00</td>
-									<td>Treasure hunting - city rally</td>
+									<td class="separator"></td>
+									<td class="breakfast top right left"></td>
 								</tr>
 								<tr>
-									<td>15:00</td>
-									<td>Cruise on the Vistula river</td>
+									<td class="hour"></td>
+									<td class="separator"></td>
+									<td class="breakfast right left">Breakfast</td>
 								</tr>
 								<tr>
-									<td>17:30</td>
-									<td>Dinner</td>
+									<td rowspan="2" class="hour">9:30 AM</td>
+									<td class="separator"></td>
+									<td class="breakfast bottom right left"></td>
 								</tr>
 								<tr>
-									<td>20:00</td>
-									<td>But why's the rum gone?! - pirate games with Captain Jack</td>
+									<td class="separator"></td>
+									<td class="empty"></td>
 								</tr>
 								<tr>
-									<td>21:00</td>
-									<td>Blackbeard's disco tavern</td>
+									<td rowspan="2" class="hour">10 AM</td>
+									<td class="separator"></td>
+									<td class="empty"></td>
 								</tr>
+								<tr>
+									<td class="separator"></td>
+									<td class="rally top left right"></td>
+								</tr>
+								<tr>
+									<td class="hour"></td>
+									<td class="separator"></td>
+									<td class="rally left right">City rally</td>
+								</tr>
+								<tr>
+									<td rowspan="2" class="hour">3 PM</td>
+									<td class="separator"></td>
+									<td class="rally bottom left right"></td>
+								</tr>
+								<tr>
+									<td class="separator"></td>
+									<td class="cruise top left right"></td>
+								</tr>
+								<tr>
+									<td class="hour"></td>
+									<td class="separator"></td>
+									<td class="cruise left right">Cruise</td>
+								</tr>
+								<tr>
+									<td rowspan="2" class="hour">5 PM</td>
+									<td class="separator"></td>
+									<td class="cruise bottom left right"></td>
+								</tr>
+								<tr>
+									<td class="separator"></td>
+									<td class="dinner top left right"></td>
+								</tr>
+								<tr>
+									<td class="hour"></td>
+									<td class="separator"></td>
+									<td class="dinner left right">Dinner</td>
+								</tr>
+								<tr>
+									<td rowspan="2" class="hour">6 PM</td>
+									<td class="separator"></td>
+									<td class="dinner bottom left right"></td>
+								</tr>
+								<tr>
+									<td class="separator"></td>
+									<td class="empty"></td>
+									<!-- <td class="empty left right"></td> -->
+								</tr>
+								<!-- <tr>
+									<td class="hour"></td>
+									<td class="separator"></td>
+									<td class="something left right">???</td>
+								</tr> -->
 							</table>
 						</div>
 
 						<div id="schedule-content-sunday" class="col-md-9 schedule-day">
 							<table class="table-day">
 								<tr>
-									<td>8:00 - 10:00</td>
-									<td>Check-out &amp; breakfast</td>
+									<td rowspan="2" class="hour">8 AM</td>
+									<td class="separator"></td>
+									<td class="empty"></td>
 								</tr>
 								<tr>
-									<td>10:00</td>
-									<td>Sightseeing &amp; Main Square Undergrounds<br>(optional, 15PLN for entry fees)</td>
+									<td class="separator"></td>
+									<td class="check-out top left right"></td>
+								</tr>
+								<tr>
+									<td class="hour"></td>
+									<td class="separator"></td>
+									<td class="check-out left right">Check out &amp; breakfast</td>
+								</tr>
+								<tr>
+									<td rowspan="2" class="hour">10 AM</td>
+									<td class="separator"></td>
+									<td class="check-out left right"></td>
+								</tr>
+								<tr>
+									<td class="separator"></td>
+									<td class="wawel top left right"></td>
+								</tr>
+								<tr>
+									<td class="hour"></td>
+									<td class="separator"></td>
+									<td class="wawel left right">Wawel Castle - sightseeing<br>(5 EUR)</td>
+								</tr>
+								<tr>
+									<td rowspan="2" class="hour">?? PM</td>
+									<td class="separator"></td>
+									<td class="wawel bottom left right"></td>
+								</tr>
+								<tr>
+									<td class="separator"></td>
+									<td class="empty"></td>
 								</tr>
 							</table>
 						</div>
@@ -228,13 +391,13 @@
 
 		<!-- GUIDEBOOK -->
 
-		<div id="guidebook-container" class="background-image">
+		<!-- <div id="guidebook-container" class="background-image">
 			<div class="container container-section">
 				<h1 class="section-header"><a id="guidebook" class="section-anchor"></a>Guidebook</h1>
 				<p>We want You not to get lost in Kraków so we've prepared a short guidebook for You.</p>
 				<p>You can download it <a href="#guidebook">here</a></p>
 			</div>
-		</div>
+		</div> -->
 
 
 
@@ -243,35 +406,48 @@
 		<div id="payment-container" class="background-image">
 			<div class="container container-section">
 				<h1 class="section-header"><a id="payment" class="section-anchor"></a>Payment</h1>
-				<p>You have 3 days to pay after registering! Otherwise your registration will be invalid :(</p>
+
+				<p>Choose the desired option from the table below.</p>
+				<p>
+					About options:
+					<ul id="option-list">
+						<li>Standard<br>Includes hostel room, starter pack, food, entries for parties and loads of fun!</li>
+						<li>Standard without accomodation<br>It's the same as Standard but we won't provide you any place to sleep.</li>
+						<li>Auschwitz-Birkenau tour<br>Optional. Guided tour with an educator in Auschwitz-Birkenau State Museum.<br><strong>IMPORTANT!</strong> We'll leave Kraków at 10AM to get to the museum so take this into account if you choose this option.</li>
+					</ul>
+				</p>
 				
-				<table>
+				<table id="payment-table">
 					<thead>
 						<tr>
-							<th></th>
-							<th colspan="2">Payment</th>
+							<th rowspan="2">Option</th>
+							<th colspan="2">Price</th>
 						</tr>
 						<tr>
-							<th>Program option</th>
 							<th>PLN</th>
 							<th>EUR</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<th>1. Normal</th>
+							<td>Standard</td>
 							<td>200 PLN</td>
 							<td>50 EUR</td>
 						</tr>
 						<tr>
-							<th>2. Without accomodation</th>
+							<td>Standard<br>without accommodation</td>
 							<td>150 PLN</td>
 							<td>37 EUR</td>
 						</tr>
 						<tr>
-							<th>3. Optional Auschwitz - Birkenau tour (on Friday) Additional payment</th>
-							<td>120 PLN</td>
-							<td>30 EUR</td>
+							<td>Standard<br>+ Auschwitz-Birkenau tour</td>
+							<td>320 PLN<br><span class="txt-normal">(200 + 120)</span></td>
+							<td>80 EUR<br><span class="txt-normal">(50 + 30)</span></td>
+						</tr>
+						<tr>
+							<td>Standard<br>without accommodation<br>+ Auschwitz-Birkenau tour</td>
+							<td>270 PLN<br><span class="txt-normal">(150 + 120)</span></td>
+							<td>67 EUR<br><span class="txt-normal">(37 + 30)</span></td>
 						</tr>
 					</tbody>
 				</table>
@@ -287,8 +463,24 @@
 			<div class="container container-section">
 				<div>
 					<h1 class="section-header"><a id="contact" class="section-anchor"></a>Contact</h1>
-					<p>Any questions?</p>
-					<p>Just ask!</p>
+					<p id="intro">Any questions? Just ask! We'll try to make everything clear for you :)</p>
+					
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="name"><i class="fas fa-user"></i><span class="data">Anna Janiec</span></div>
+								<div class="role"><i class="fas fa-briefcase"></i><span class="data">Main Coordinator</span></div>
+								<div class="phone"><i class="fas fa-phone"></i><span class="data">+48 503 653 225</span></div>
+								<div class="mail"><i class="fas fa-envelope"></i><span class="data">anna.janiec@iaeste.pl</span></div>
+							</div>
+							<div class="col-md-6">
+								<div class="name"><i class="fas fa-user"></i><span class="data">Dominika Bodzak</span></div>
+								<div class="role"><i class="fas fa-briefcase"></i><span class="data">Logistics Coordinator</span></div>
+								<div class="phone"><i class="fas fa-phone"></i><span class="data">+48 600 738 844</span></div>
+								<div class="mail"><i class="fas fa-envelope"></i><span class="data">dominika.bodzak@iaeste.pl</span></div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

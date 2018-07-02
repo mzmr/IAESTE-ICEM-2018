@@ -1,0 +1,16 @@
+#join-us-container #form-container {
+    text-align:center;
+}
+
+#join-us-container #registration-form {
+    box-shadow: -1px -1px 0px #ca4a4588, -2px -2px 0px #f0c46f, -3px -3px 0px #6f9e5199, -4px -4px 0px #7cd3e8, -5px -5px 0px #9a7eb5;
+    padding: 15px;
+    background: #f0c46f;
+    color: white;
+    text-shadow: none;
+    font-size: 40px;
+}
+
+#join-us-container #registration-form:hover {
+    background:hsl(40, 70%, 60%);
+}

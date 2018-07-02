@@ -10,26 +10,29 @@
 }
 
 #schedule-container .day-button {
-    height:130px;
-    width:130px;
+    height:160px;
+    width:160px;
     display:flex;
     justify-content:center;
     align-items:center;
     cursor: pointer;
     color: white;
-    border-radius: 50%;
+    background-size:contain;
+    font-size:30px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #schedule-container .day-button#button-friday {
-    background:#9a7eb5;
+    background-image:url('../resources/images/circles/circle3.png');
 }
 
 #schedule-container .day-button#button-saturday {
-    background:#6f9e51;
+    background-image:url('../resources/images/circles/circle4.png');
 }
 
 #schedule-container .day-button#button-sunday {
-    background:#f0c46f;
+    background-image:url('../resources/images/circles/circle2.png');
 }
 
 #schedule-container .day-button#button-friday,
@@ -37,8 +40,8 @@
 #schedule-container .day-button#button-sunday {
     opacity:.5;
     text-shadow:initial;
-    -webkit-transition: .5s; /* Safari */
-    transition: .5s;
+    -webkit-transition: .3s; /* Safari */
+    transition: .3s;
 }
 
 #schedule-container .day-button#button-friday:hover,
@@ -52,11 +55,8 @@
 #schedule-container .day-button#button-sunday.active {
     opacity:1;
     text-shadow:inherit;
-    -webkit-transition: .5s; /* Safari */
-    transition: .5s;
-    box-shadow: 0px 0px 20px white, 0px 0px 20px white;
-    height:150px;
-    width:150px;
+    -webkit-transition: .3s; /* Safari */
+    transition: .3s;
 }
 
 
@@ -72,38 +72,11 @@
 
 #schedule-container .table-day {
     width:100%;
+    border-collapse:collapse;
 }
 
 #schedule-container .table-day * {
-    /* font-size:25px; */
-}
-
-#schedule-container .table-day tr td:first-of-type {
-    width:200px;
-    text-align:center;
-}
-
-#schedule-container .table-day td {
-    padding-top:20px;
-    padding-bottom:20px;
-}
-
-#schedule-container #schedule-content-friday .table-day tr {
-    border-bottom: 2px solid #9a7eb588;
-}
-
-#schedule-container #schedule-content-saturday .table-day tr {
-    border-bottom: 2px solid #6f9e5188;
-}
-
-#schedule-container #schedule-content-sunday .table-day tr {
-    border-bottom: 2px solid #f0c46f88;
-}
-
-#schedule-container #schedule-content-friday .table-day tr:last-child,
-#schedule-container #schedule-content-saturday .table-day tr:last-child,
-#schedule-container #schedule-content-sunday .table-day tr:last-child {
-    border-bottom:none;
+    font-size:25px;
 }
 
 @media (max-width:767px) {
@@ -117,4 +90,111 @@
         padding-left:0;
         padding-right:0;
     }
+}
+
+@media (min-width:401px) and (max-width:450px) {
+    #schedule-container .day-button {
+        font-size:25px;
+    }
+}
+
+@media (max-width:400px) {
+    #schedule-container .day-button {
+        font-size:20px;
+    }
+}
+
+#schedule-container .table-day tr {
+    border:none;
+}
+
+#schedule-container .table-day td {
+    text-align:center;
+    padding:5px;
+}
+
+#schedule-container .table-day .hour {
+    text-align:right;
+    width: 1px;
+    padding-right: 15px;
+}
+
+#schedule-container #schedule-content-friday .table-day td {
+    border-color:#4d439766;
+}
+
+#schedule-container #schedule-content-friday .table-day .check-in {
+    background:#4d439766;
+}
+
+#schedule-container #schedule-content-friday .table-day .auschwitz,
+#schedule-container #schedule-content-friday .table-day .bbq {
+    background:#435ca966;
+}
+
+#schedule-container #schedule-content-friday .table-day .party {
+    background:#3485c666;
+}
+
+#schedule-container #schedule-content-saturday .table-day td {
+    border-color:#55822f66;
+}
+
+#schedule-container #schedule-content-saturday .table-day .breakfast {
+    background:#55822f66;
+}
+
+#schedule-container #schedule-content-saturday .table-day .rally {
+    background:#74972b66;
+}
+
+#schedule-container #schedule-content-saturday .table-day .cruise {
+    background:#8eaa2766;
+}
+
+#schedule-container #schedule-content-saturday .table-day .dinner {
+    background:#b0c12366;
+}
+
+#schedule-container #schedule-content-sunday .table-day td {
+    border-color:#dfac1366;
+}
+
+#schedule-container #schedule-content-sunday .table-day .check-out {
+    background:#dfac1366;
+}
+
+#schedule-container #schedule-content-sunday .table-day .wawel {
+    background:#d4c81b66;
+}
+
+
+#schedule-container #schedule-content-friday .table-day td:nth-child(3) {
+    width:60%;
+}
+
+#schedule-container .table-day .top {
+    border-top-style: solid;
+    border-top-width: 2px;
+}
+
+#schedule-container .table-day .right {
+    border-right-style: solid;
+    border-right-width: 2px;
+}
+
+#schedule-container .table-day .bottom {
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+
+#schedule-container .table-day .left {
+    border-left-style: solid;
+    border-left-width: 2px;
+}
+
+
+#schedule-container .table-day .separator {
+    padding:0;
+    width:0;
 }

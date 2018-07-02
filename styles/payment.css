@@ -1,0 +1,57 @@
+#payment-container #payment-table {
+    width:100%;
+}
+
+#payment-container #payment-table td {
+    padding:5px;
+}
+
+#payment-container #payment-table td,
+#payment-container #payment-table th {
+    border: 2px solid #55822f66;
+}
+
+#payment-container #payment-table thead tr {
+    background: #b0c12366;
+}
+
+#payment-container #payment-table tbody tr {
+    background:#8eaa2766;
+}
+
+#payment-container #payment-table tbody tr:hover {
+    background:#8eaa2799;
+}
+
+#payment-container #payment-table tbody tr:last-child{
+    /* border-bottom: none; */
+}
+
+#payment-container #payment-table td,
+#payment-container #payment-table th {
+    text-align:center;
+}
+
+#payment-container #payment-table td .txt-normal {
+    font-weight:normal;
+}
+
+#payment-container #option-list > li {
+    padding:0.3em 0 0.5em 2.8em;
+    background-position:0 0;
+    list-style:none;
+    background-repeat:no-repeat;
+    background-size:50px;
+}
+
+#payment-container #option-list > li:nth-child(1) {
+    background-image:url('../resources/images/circles/circle1.png');
+}
+
+#payment-container #option-list > li:nth-child(2) {
+    background-image:url('../resources/images/circles/circle5.png');
+}
+
+#payment-container #option-list > li:nth-child(3) {
+    background-image:url('../resources/images/circles/circle6.png');
+}

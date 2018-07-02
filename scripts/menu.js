@@ -22,21 +22,26 @@ function manageNavbarStickness() {
 
 
 var navbarOpener = document.getElementById('navbar-opener');
-var mobileMenuLeft = document.getElementById('mobile-menu-left');
-var mobileMenuRight = document.getElementById('mobile-menu-right');
+// var mobileMenuLeft = document.getElementById('mobile-menu-left');
+// var mobileMenuRight = document.getElementById('mobile-menu-right');
+var mobileMenu = document.getElementById('mobile-menu');
 
 function openNav() {
   navbarOpener.style.display = 'none';
-  mobileMenuLeft.style.width = '50%';
-  mobileMenuRight.style.width = '50%';
-  mobileMenuLeft.classList.add('active');
-  mobileMenuRight.classList.add('active');
+  // mobileMenuLeft.style.width = '50%';
+  // mobileMenuRight.style.width = '50%';
+  // mobileMenuLeft.classList.add('active');
+  // mobileMenuRight.classList.add('active');
+  mobileMenu.style.width = '100%';
+  mobileMenu.classList.add('active');
 }
 
 function closeNav() {
   navbarOpener.style.display = 'inline-block';
-  mobileMenuLeft.classList.remove('active');
-  mobileMenuRight.classList.remove('active');
-  mobileMenuLeft.style.width = '0';
-  mobileMenuRight.style.width = '0';
+  // mobileMenuLeft.classList.remove('active');
+  // mobileMenuRight.classList.remove('active');
+  // mobileMenuLeft.style.width = '0';
+  // mobileMenuRight.style.width = '0';
+  mobileMenu.style.width = '0';
+  mobileMenu.classList.remove('active');
 }
