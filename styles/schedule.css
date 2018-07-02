@@ -156,6 +156,10 @@
     background:#b0c12366;
 }
 
+#schedule-container #schedule-content-saturday .table-day .party {
+    background:#cad32066;
+}
+
 #schedule-container #schedule-content-sunday .table-day td {
     border-color:#dfac1366;
 }
