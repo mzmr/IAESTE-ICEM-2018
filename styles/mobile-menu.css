@@ -1,46 +1,48 @@
-.sidenav {
+#mobile-menu {
     height:100%;
     width:0;
     position:fixed;
     z-index:101;
     top:0;
     background-color:transparent;
-    overflow-x:hidden;
-    transition:background-color 1s;
+    overflow:hidden;
     display:flex;
-    justify-content: center;
+    justify-content:center;
 }
 
-#mobile-menu-left {
-    left:0;
-}
-
-#mobile-menu-right {
-    right:0;
-}
-
-.sidenav.active {
+#mobile-menu.active {
     transition:background-color 1s;
     background-color:#fffb;
 }
 
-.sidenav a {
-    width: min-content;
-    display: inline-block;
-    border-radius: 50%;
+#mobile-menu > #mobile-items {
+    display:flex;
+}
+
+#mobile-menu > #mobile-items > #mobile-items-left,
+#mobile-menu > #mobile-items > #mobile-items-right {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+#mobile-menu > #mobile-items a {
+    display:inline-block;
+    border-radius:50%;
     margin:1.5vmin 10px;
 }
 
-.sidenav a:hover {
+#mobile-menu > #mobile-items a:hover {
     text-decoration:none;
     text-shadow: 0px 0px 5px white, 0px 0px 15px white, 0px 0px 15px white, 0px 0px 25px white;
 }
 
-.sidenav a:focus {
+#mobile-menu > #mobile-items a:focus {
     outline:none;
 }
 
-.sidenav a div {
+#mobile-menu > #mobile-items a > div {
     padding:10px;
     font-size:35px;
     color:white;
@@ -48,103 +50,140 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    width:30vmin;
-    height:30vmin;
     font-weight:bold;
     text-align:center;
     vertical-align:middle;
+    position:absolute;
+    background-size:cover;
+    filter:blur(3px);
+    width:0;
+    height:0;
+    font-size:0;
+    opacity:0;
 }
 
-.sidenav div a {
-    width:200vmin;
-}
-
-.sidenav.active div a {
-    transition:width .3s;
-    width:30vmin;
-}
-
-.sidenav.active .mobile-items-left a {
-    margin-left:15%;
-}
-
-.sidenav.active .mobile-items-right a {
-    margin-right:15%;
-}
-
-@media (min-width:431px) and (max-width:575px) {
-    .sidenav a div {
-        font-size:30px;
-    }
-}
-
-@media (max-width:430px) {
-    .sidenav a div {
-        font-size:24px;
-    }
-}
-
-.sidenav > div {
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-}
-
-.sidenav.active .mobile-items-right div {
-    margin-left: auto;
-}
-
-.sidenav .mobile-items-left a:nth-of-type(1) div {
-    background:#9a7eb5;
-}
-
-.sidenav .mobile-items-left a:nth-of-type(2) div {
-    background:#6f9e51;
-}
-
-.sidenav .mobile-items-left a:nth-of-type(3) div {
-    background:#ca6b45;
-}
-
-.sidenav .mobile-items-right a:nth-of-type(1) div {
-    background:#7cd3e8;
-}
-
-.sidenav .mobile-items-right a:nth-of-type(2) div {
-    background:#f0c46f;
-}
-
-.sidenav .mobile-items-right a:nth-of-type(3) div {
-    background:#ce2f29;
-}
-
-
-.sidenav.active .mobile-items-left a:nth-of-type(1),
-.sidenav.active .mobile-items-right a:nth-of-type(1) {
+#mobile-menu #mobile-items-left > a:nth-of-type(1) > div {
+    background-image:url('../resources/images/circles/circle3.png');
     transition-delay:.1s;
 }
 
-.sidenav.active .mobile-items-left a:nth-of-type(2),
-.sidenav.active .mobile-items-right a:nth-of-type(2) {
-    transition-delay:.2s;
+#mobile-menu #mobile-items-left > a:nth-of-type(2) > div {
+    background-image:url('../resources/images/circles/circle4.png');
+    transition-delay:.7s;
 }
 
-.sidenav.active .mobile-items-left a:nth-of-type(3),
-.sidenav.active .mobile-items-right a:nth-of-type(3) {
+#mobile-menu #mobile-items-left > a:nth-of-type(3) > div {
+    background-image:url('../resources/images/circles/circle5.png');
+    transition-delay:.4s;
+}
+
+#mobile-menu #mobile-items-right > a:nth-of-type(1) > div {
+    background-image:url('../resources/images/circles/circle6.png');
+    transition-delay:.5s;
+}
+
+#mobile-menu #mobile-items-right > a:nth-of-type(2) > div {
+    background-image:url('../resources/images/circles/circle2.png');
     transition-delay:.3s;
 }
 
+#mobile-menu #mobile-items-right > a:nth-of-type(3) > div {
+    background-image:url('../resources/images/circles/circle1.png');
+    transition-delay:.8s;
+}
+
+
+#mobile-menu.active > #mobile-items a > div {
+    width:30vmin;
+    height:30vmin;
+    transition-duration:.15s;
+    transition-timing-function: cubic-bezier(.17,.09,1,1.5);
+    filter:blur(0px);
+    font-size:35px;
+    opacity:1;
+}
+
+@media (orientation:portrait) {
+    #mobile-menu.active #mobile-items-left a > div {
+        left:15vmin;
+    }
+
+    #mobile-menu.active #mobile-items-right a > div {
+        right:15vmin;
+    }
+
+    #mobile-menu.active #mobile-items a:nth-of-type(1) > div {
+        top:3%;
+    }
+
+    #mobile-menu.active #mobile-items a:nth-of-type(2) > div {
+        top:36%;
+    }
+
+    #mobile-menu.active #mobile-items a:nth-of-type(3) > div {
+        top:69%;
+    }
+
+    @media (min-width:500px) and (max-width:575px) {
+        #mobile-menu.active > #mobile-items a > div {
+            font-size:30px;
+        }
+    }
+    
+    @media (max-width:499px) {
+        #mobile-menu.active > #mobile-items a > div {
+            font-size:25px;
+        }
+    }
+}
+
+
+@media (orientation:landscape) {
+    #mobile-menu.active #mobile-items-left a > div {
+        top:15vmin;
+    }
+    
+    #mobile-menu.active #mobile-items-right a > div {
+        bottom:15vmin;
+    }
+    
+    #mobile-menu.active #mobile-items a:nth-of-type(1) > div {
+        left:3%;
+    }
+    
+    #mobile-menu.active #mobile-items a:nth-of-type(2) > div {
+        left:36%;
+    }
+    
+    #mobile-menu.active #mobile-items a:nth-of-type(3) > div {
+        left:69%;
+    }
+
+    @media (min-height:500px) and (max-height:575px) {
+        #mobile-menu.active > #mobile-items a > div {
+            font-size:30px;
+        }
+    }
+    
+    @media (max-height:499px) {
+        #mobile-menu.active > #mobile-items a > div {
+            font-size:25px;
+        }
+    }
+}
 
 
 
-
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 50px;
-    margin-left: 50px;
+#mobile-menu > #closebtn {
+    position:absolute;
+    top:0;
+    right:0;
+    font-size:50px;
     color:black;
+    cursor:pointer;
+    width:70px;
+    height:70px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
